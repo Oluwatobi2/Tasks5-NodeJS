@@ -1,7 +1,7 @@
 const { crudTask } = require('../models/indexmodel');
 
 function index (request, response) {
-      crudTask.find({name: request.params.name}, 'name course year', function(err, records){
+      crudTask.find({}, 'name course year', function(err, records){
             if (err) console.log(err);
             response.json({
                   status: "completed",
